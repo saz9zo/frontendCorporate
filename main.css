@@ -23,7 +23,7 @@ header,#header_nav_list{
 }
 header {
     margin:2.5% 10%;
-
+    position: relative;
 }
 
 .nav_list {
@@ -57,6 +57,36 @@ header {
     display: none;
 }
 
+
+#nav_list {
+   
+    background: hsl(265,26%,20%);
+    text-align: center;
+    padding:10%;
+    font-size: 20px;
+    line-height: 50px;
+    position: absolute;
+    top:137%;
+    z-index: 10;
+    width:80%;  
+}
+.nav_list_drop {
+    color:white;
+    font-size: 20px;
+    
+}
+.nav_list_drop:hover {
+    border: 2px solid white;
+}
+
+#header_nav_list_dropdown > img {
+    position: relative;
+    right:0%;
+    bottom:0%;
+   max-width: 50%;
+
+}
+
 @media only screen and (max-width: 650px){
 
    header {
@@ -83,6 +113,9 @@ header {
     background-color: hsl(256, 26%, 20%);
     z-index: 10;
 
+}
+#toggle:checked + #nav_list {
+   display: block;
 }
 }
 
