@@ -14,8 +14,6 @@ ul {
     list-style-type: none;
     font-size: 12px;
 }
-
-
 header,#header_nav_list{
     display :flex;
     flex-direction : row;
@@ -24,13 +22,10 @@ header,#header_nav_list{
     align-items: center;
 }
 header {
-    margin-left: 10%;
-    margin-right: 10%; 
+    margin:2.5% 10%;
+
 }
-#nav {
-    display: flex;
-    flex-direction: column;
-}
+
 .nav_list {
     color: gray;
     margin-left: 15px;
@@ -65,31 +60,33 @@ header {
 @media only screen and (max-width: 650px){
 
    header {
-       margin:5% 10%;
+       margin:5% 0%;
    }
+   header > img {
+       margin-left:10%;
+   }
+   #nav {
+    display: flex;
+    flex-direction: row-reverse;
+    
+    margin-right: 10%;
+    position: relative;
+}
 
    #hamburger {
        display: block;
+        
    }
    #header_nav_list{
     display:none;
+    position: absolute;
+    background-color: hsl(256, 26%, 20%);
+    z-index: 10;
+
 }
 }
+
  
-#toggle:checked + #header_nav_list{
-    display: block;
-}
- 
-
-
-
-
-
-
-
-
-
-
 
 
 #intro {
