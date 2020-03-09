@@ -382,7 +382,7 @@ footer {
     
 }
 footer > hr {
-    margin: 10%;
+    margin: 5% 10%;
 }
 #footer_logo {
     z-index: 1;
