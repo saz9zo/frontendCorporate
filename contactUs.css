@@ -1,0 +1,52 @@
+body {
+     padding:5%;  
+     background-color:rgb(232, 237, 252);
+}
+
+#contactUs {
+    padding:10%;
+    max-width: 40%;
+    margin: 0 auto;
+    color:white;
+    line-height: 5vh;
+    display:flex;
+    flex-direction: column;
+    background-color: hsl(256, 26%, 20%);
+}
+.contact-us-heading {
+    font-family: 'DM Serif Display','sarif';
+    text-align: center;
+    max-width: 100%;
+    height:auto;
+    margin:0px;
+}
+
+#contactUs > input, #contactUs >textarea {
+    background-color:rgb(232, 237, 252);
+    padding:5px 10px;
+    margin-bottom: 5%;
+    border: none;
+    border-radius: 10px;
+}
+
+.feedback {
+    height: 20vh;
+}
+.submit {
+    margin-top: 15%;
+}
+
+@media only screen and (max-width: 650px){
+   #contactUs {
+        margin:0;
+        max-width:100%;
+        
+    }
+    .contact-us-heading {
+     
+        font-size: 100%;
+    }
+    #contactUs > label {
+        font-size: 70%;
+    }
+}
