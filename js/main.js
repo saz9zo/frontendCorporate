@@ -4,7 +4,6 @@ let navBar = document.querySelector('#header_nav_list_mobile');
 hamburger.addEventListener('click', function() {
   hamburger.style.display = "none";
   closebutton.style.display="block"; 
-
   navBar.style.display= "block";
 });
 
