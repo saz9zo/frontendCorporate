@@ -12,7 +12,7 @@ body {
     display:flex;
     flex-direction: column;
     background-color: hsl(256, 26%, 20%); 
-    border-radius:80px 0px 80px 0px;
+    
 }
 .contact-us-heading {
     font-family: 'DM Serif Display','sarif';
@@ -26,18 +26,23 @@ body {
 #contactUs > input, #contactUs >textarea {
     background-color:rgb(232, 237, 252);
     padding:5px 10px;
-    margin-bottom: 5%;
     border: none;
     border-radius: 10px;
 }
 
-.feedback {
+.query {
     height: 20vh;
 }
 .submit {
     margin-top: 15%;
 }
-
+#contactUs > p {
+    margin:0px;
+    padding:0px;
+    font-size:12px;
+    color:red;
+    height:13px;
+}
 @media only screen and (max-width: 650px){
    #contactUs {
         margin:0;

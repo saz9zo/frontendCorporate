@@ -51,8 +51,9 @@ ul {
 .header_mobile {
     display: none;
 }
-
-#toggle {
+.close {
+    background:none;
+    border:none;
     display: none;
 }
 
@@ -82,26 +83,31 @@ ul {
       z-index: 10;
       background-color:  hsl(270, 9%, 17%);
       text-align: center;
-      width: 90%;
-      padding: 10% 5% 0% 5%;      
-  }
-
-  #header_nav_list_mobile > li:hover {
-        border:1px solid white;
+      width: 100%;
+      padding: 10% 0 0 0;      
   }
   .nav_list_mobile {
+      display: block;
       font-size: 17px;
       color:white;
       line-height: 50px;
-      margin: 100px 10px;
-  }
-  #header_nav_list_mobile > svg{
-      max-width: 100%;
-      padding-top: 10%; 
+      width:80%;
+      margin:auto;   
   }
 
-  #hamburger {
-      cursor: pointer;
+  .nav_list_mobile:hover {
+    border:1px solid white;
+}
+  #header_nav_list_mobile > svg{
+      width: 100%;
+      padding:0px;
+      padding-top: 10%; 
+      
+  }
+  .hamburger-button{
+      background: transparent;
+      border: none;
+      cursor:pointer;
   }
 }
 
