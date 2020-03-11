@@ -1,10 +1,12 @@
+
 footer {
+    font-size: 16px;
     margin-top:10%;
     background-color: cornsilk;
     position: relative;
 }
 #social_links{
-     height: 30px;
+     height: 150px;
      margin-left:10%;
      margin-right:10%;
      display: flex;
@@ -52,7 +54,7 @@ footer > hr {
 #footer_image {
     position: absolute;
     top:0%;
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
 }
 
@@ -60,15 +62,25 @@ footer > hr {
     max-width: 100%;
     height: auto;
     visibility: hidden;
+    position: absolute;
 }
+
 
 @media only screen and (max-width:650px){
     #social_links {
         display: flex;
         flex-direction: column;
+        justify-content: space-around;
+        padding-top: 15%;
+        
     }
     footer > hr {
         display: block;
+    }
+
+    #footer_logo {
+        width: 30%;
+        min-width: 100px;
     }
 
     #useful_footer_links {
@@ -81,6 +93,7 @@ footer > hr {
     }
 
     #footer_image {
+
        visibility: hidden;
     }
     #footer_image_mobile {
