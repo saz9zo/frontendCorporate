@@ -9,7 +9,7 @@
     <title>Insure</title>
 </head>
 <body>
-   <%@include file="header.html"%>
+   <%@include file="header.jsp"%>
 
     <div id= "introduction">
         <img id="intro_image_people" src ="insure-landing-page-master/images/image-intro-desktop.jpg" />
@@ -70,7 +70,7 @@
                 <img id="how_we_work_pattern_mobile"  src= "insure-landing-page-master/images/bg-pattern-how-we-work-mobile.svg">
             </section>
 
-            <%@include file="footer.html"%>
+            <%@include file="footer.jsp"%>
             <script src="js/main.js"></script>
 </body>
 </html>
