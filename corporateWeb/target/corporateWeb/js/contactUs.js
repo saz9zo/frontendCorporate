@@ -8,8 +8,8 @@ form.addEventListener('submit', function() {
     let res = validate();
 
     if(res == true){
-        window.alert("validation successful");
-        window.location.href = "index.html";
+       return true;
+        
     }
 });
 
