@@ -6,20 +6,20 @@ import javax.servlet.annotation.WebServlet;
 public class SaveData {
 
      public void saveit (String name, String email, String phone,String query) {
-             queryPojo qPojo = new queryPojo();   
+             QueryPojo qPojo = new QueryPojo();
              qPojo.setName(name);
              qPojo.setEmail(email);
              qPojo.setPhone(phone);
              qPojo.setQuery(query); 
              
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("querycontrol");
-        EntityManager em = emf.createEntityManager();
-        EntityTransaction et = em.getTransaction();
-        et.begin();
-        
-        em.persist(qPojo);
-        et.commit();
-
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("querycontrol");
+        EntityManager entityManager= entityManagerFactory.createEntityManager();
+        EntityTransaction entityTransaction = entityManager.getTransaction();
+        entityTransaction.begin();
+        entityManager.persist(qPojo);
+        entityTransaction.commit();
+        entityManager.close();
+ 
          }    
      }
   
