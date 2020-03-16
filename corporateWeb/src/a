@@ -1,0 +1,14 @@
+mvn org.codehaus.cargo:cargo-maven2-plugin:run
+
+
+list port in use
+sudo netstat -tulpn | grep LISTEN
+
+kill port use
+sudo kill $(sudo lsof -t -i:3000)
+sudo kill -9 $(sudo lsof -t -i:8080)
+
+stop postgres service
+sudo service postgresql stop
+
+mvn org.codehaus.cargo:cargo-maven2-plugin:run

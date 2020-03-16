@@ -16,12 +16,11 @@ public class serve extends HttpServlet {
             String email = request.getParameter("email");
             String phone = request.getParameter("number");
             String query = request.getParameter("query");
+      
+              SaveData savedata= new SaveData();
+              savedata.saveit(name,email,phone,query);
+
               PrintWriter out = response.getWriter();
-              out.print("hello");
-            PrintWriter printWriter = response.getWriter();
-            printWriter.println(name);
-            printWriter.println(email);
-            printWriter.println(phone);
-            printWriter.println(query);
+              response.sendRedirect("contactUs.jsp");
     }
 }

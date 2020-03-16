@@ -1,9 +1,0 @@
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/contactUs.jsp HTTP/1.1" 200 11136 http-bio-8089-exec-1 951
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/css/contactUs.css HTTP/1.1" 200 1042 http-bio-8089-exec-3 8
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/js/main.js HTTP/1.1" 304 - http-bio-8089-exec-2 15
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/css/header.css HTTP/1.1" 304 - http-bio-8089-exec-4 1
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/css/footer.css HTTP/1.1" 304 - http-bio-8089-exec-5 2
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/insure-landing-page-master/images/logo.svg HTTP/1.1" 200 2798 http-bio-8089-exec-6 1
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/insure-landing-page-master/images/bg-pattern-footer-mobile.svg HTTP/1.1" 304 - http-bio-8089-exec-7 1
-127.0.0.1 - - [16/Mar/2020:14:35:59 +0530] "GET /corporateWeb/insure-landing-page-master/images/bg-pattern-footer-desktop.svg HTTP/1.1" 304 - http-bio-8089-exec-8 2
-127.0.0.1 - - [16/Mar/2020:14:36:01 +0530] "POST /corporateWeb/serve HTTP/1.1" 200 9 http-bio-8089-exec-9 5
