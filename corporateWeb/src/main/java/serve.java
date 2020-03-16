@@ -16,7 +16,8 @@ public class serve extends HttpServlet {
             String email = request.getParameter("email");
             String phone = request.getParameter("number");
             String query = request.getParameter("query");
-
+              PrintWriter out = response.getWriter();
+              out.print("hello");
             PrintWriter printWriter = response.getWriter();
             printWriter.println(name);
             printWriter.println(email);
