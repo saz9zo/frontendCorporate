@@ -11,7 +11,7 @@
   <%@include file="header.jsp" %>
 
 
-  <form action="serve" id="contactUs" method="POST">
+  <form action="Serve" id="contactUs" method="POST">
     <h1 class="contact-us-heading">Contact Us</h1>
     <label>Name</label>
     <input type="text" class="name" name="name"><br>
