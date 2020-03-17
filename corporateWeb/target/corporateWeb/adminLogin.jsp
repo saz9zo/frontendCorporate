@@ -9,18 +9,22 @@
 <body>
     <%@include file="header.jsp"%>
 
-        <form action="login" method="post">
+        <form action="login" method="post" id="loginForm">
             <h1>Login</h1>
             <label for="username" class="label">username</label>
             <input type="text" name="username" class= "textField" id="username">
+            <p id="usernamePtag"></p>
             <label for="password" class="label">password</label>
             <input type="password" name="password" class="textField" id="password">
-            <input type="submit" value="login" class="login">
+            <p id="passwordPtag"></p>
+            <input type="submit" onclick="return validateLogin()" value="login" class="login">
             <a href="registerAdmin.jsp" class="registerlink">register</a>
         </form>
 
         
 
     <%@include file="footer.jsp"%>
+
+    <script src="js/loginvalidate.js"></script>
 </body>
 </html>

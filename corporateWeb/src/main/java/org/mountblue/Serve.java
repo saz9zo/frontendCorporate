@@ -20,8 +20,7 @@ public class Serve extends HttpServlet {
       
               SaveData savedata= new SaveData();
               savedata.saveit(name,email,phone,query);
-
-              PrintWriter out = response.getWriter();
+              
               response.sendRedirect("contactUs.jsp");
     }
 }

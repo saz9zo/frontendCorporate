@@ -11,12 +11,17 @@ import java.util.*;
 public class SaveRegister {
     public boolean saveData (String name, String email, String password) {
 
+             if(name=="" || email=="" || password==""){
+                 return false;
+             }
             List<AdminPojo> adminList = new ArrayList<>(); 
              String pass = BCrypt.hashpw(password, BCrypt.gensalt(12));
             AdminPojo aPojo = new AdminPojo();
             aPojo.setName(name);
             aPojo.setEmail(email);
             aPojo.setPassword(pass);
+
+            
           
         try {
         EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("querycontrol");

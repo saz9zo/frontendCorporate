@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" href="css/contactUs.css">
-    <title>Document</title>
+    <title>contactus</title>
 </head>
 <body>
   <%@include file="header.jsp" %>
@@ -25,11 +25,11 @@
     <label>Query</label>
     <textarea class="query" name="query"></textarea><br>
     <p class= "querytag"></p>
-    <input type="submit" class="submit" value="submit">
+    <input type="submit" onclick="return validate()" class="submit" value="submit">
    </form>
 
   <%@include file="footer.jsp" %>
 
-  <!-- <script src="js/contactUs.js"></script> -->
+  <script src="js/contactUs.js"></script>
 </body>
 </html>
