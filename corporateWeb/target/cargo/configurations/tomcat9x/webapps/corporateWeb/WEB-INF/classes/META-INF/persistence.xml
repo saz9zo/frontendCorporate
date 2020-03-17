@@ -13,6 +13,7 @@
             <property name="hibernate.connection.url" value="jdbc:postgresql://localhost/corpdatabase"/>
             <property name="hibernate.connection.username" value="sakul"/>
             <property name="hibernate.connection.password" value="sakul"/>
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
         </properties>
     </persistence-unit>
 </persistence>

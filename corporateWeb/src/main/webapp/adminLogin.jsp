@@ -9,14 +9,17 @@
 <body>
     <%@include file="header.jsp"%>
 
-        <form action="displayData" method="post">
+        <form action="login" method="post">
             <h1>Login</h1>
-            <label for="username">username</label>
-            <input type="text" name="username" id="username">
-            <label for="password">password</label>
-            <input type="password" name="password" id="password">
-            <input type="submit" value="login">
+            <label for="username" class="label">username</label>
+            <input type="text" name="username" class= "textField" id="username">
+            <label for="password" class="label">password</label>
+            <input type="password" name="password" class="textField" id="password">
+            <input type="submit" value="login" class="login">
+            <a href="registerAdmin.jsp" class="registerlink">register</a>
         </form>
+
+        
 
     <%@include file="footer.jsp"%>
 </body>

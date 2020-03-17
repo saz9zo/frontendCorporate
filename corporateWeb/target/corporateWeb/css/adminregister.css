@@ -1,0 +1,42 @@
+.registerForm {
+    font-family:  'Karla', sans-serif;;
+    display: flex;
+    flex-direction: column;   
+    max-width: 60%;    
+    padding: 20px; 
+    margin: auto;   
+    background-color: hsl(256,26%,20%);   
+    color: white;
+
+}
+
+.label {
+margin-bottom: 7px;
+margin-left: 15%;
+
+}
+
+.inputtext {
+    max-width: 70%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.registerbutton {
+    width: 75%;
+    max-width: 245px;
+    margin: auto;
+    margin-bottom: 15px;
+    color:white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.loginlink {
+    color: white;
+    margin: auto;
+
+}
+.loginlink:hover{
+    color:yellowgreen;
+}

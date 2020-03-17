@@ -16,6 +16,7 @@
             <li ><a href="#" class = "nav_list">BLOG</a></li>
             <li ><a href="#" class = "nav_list">ACCOUNT</a></li>
             <li ><a href="#" class = "view_plans" id= "view_plans_header">VIEW PLANS</a></li>
+            
               
         </ul> 
     </div> 

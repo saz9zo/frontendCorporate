@@ -13,15 +13,21 @@ public class SaveData {
              qPojo.setEmail(email);
              qPojo.setPhone(phone);
              qPojo.setQuery(query); 
-             
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("querycontrol");
+       
+             EntityManagerFactory entityManagerFactory = null;
+
+          try{
+        entityManagerFactory = Persistence.createEntityManagerFactory("querycontrol");
         EntityManager entityManager= entityManagerFactory.createEntityManager();
         EntityTransaction entityTransaction = entityManager.getTransaction();
         entityTransaction.begin();
         entityManager.persist(qPojo);
         entityTransaction.commit();
-        entityManager.close();
- 
+          }
+          catch(Exception e){}
+          finally {
+        entityManagerFactory.close();
+          }
          }    
      }
   

@@ -10,17 +10,15 @@ import java.util.*;
 public class DisplayContactData {
     public List<QueryPojo> fetchData () {
         List<QueryPojo> queryList = new ArrayList<>();
+
+        EntityManagerFactory emfactory = null;
     try {
-    EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("querycontrol");
+       emfactory = Persistence.createEntityManagerFactory("querycontrol");
     EntityManager entitymanager = emfactory.createEntityManager();
-    TypedQuery<QueryPojo> query = entitymanager.createQuery("SELECT que FROM contactQuery que",QueryPojo.class);
-    queryList = query.getResultList();
-    for(QueryPojo q: queryList) {
-        System.out.println(q);
-    }
+    queryList = entitymanager.createQuery("select e from QueryPojo e", QueryPojo.class).getResultList();
 } catch(Exception e){}
 finally{
-
+  emfactory.close();
 }
       return queryList;
     }

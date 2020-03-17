@@ -63,6 +63,13 @@
   <version>9.1-901-1.jdbc4</version>
 </dependency>
 
+<!-- https://mvnrepository.com/artifact/org.mindrot.bcrypt/bcrypt -->
+<dependency>
+  <groupId>org.mindrot</groupId>
+  <artifactId>jbcrypt</artifactId>
+  <version>0.3m</version>
+</dependency>
+
   </dependencies>
 
   <build>

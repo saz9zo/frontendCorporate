@@ -1,4 +1,7 @@
+org/mountblue/Logout.class
 org/mountblue/QueryPojo.class
+org/mountblue/Validate.class
+org/mountblue/Login.class
 org/mountblue/AdminPojo.class
 org/mountblue/SaveRegister.class
 org/mountblue/AdminRegister.class
