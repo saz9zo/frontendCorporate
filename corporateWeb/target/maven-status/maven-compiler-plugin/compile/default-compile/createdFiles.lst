@@ -7,4 +7,5 @@ org/mountblue/SaveRegister.class
 org/mountblue/AdminRegister.class
 org/mountblue/DisplayContactData.class
 org/mountblue/SaveData.class
+org/mountblue/displaycontent.class
 org/mountblue/Serve.class

@@ -29,36 +29,49 @@
             response.sendRedirect("adminLogin.jsp");
         }
     %>
-    <table class="detailsTable" border="1 solid black">
-        <tr class="row">
-            <th>name</th>
-            <th>email</th>
-            <th>phone</th>
-            <th>query</th>
-        </tr>
-    
-    <%
-       
-       DisplayContactData contactdata = new DisplayContactData();
-       String jsondata = contactdata.fetchData();
-       Gson g = new Gson();
-       QueryPojo[] data = g.fromJson(jsondata, QueryPojo[].class);    
-       for(QueryPojo querydata: data){
-                
-        %>
-           <tr class="row">
-               <td>   <%= querydata.getName()%>   </td>
-               <td>   <%= querydata.getEmail()%>   </td>
-               <td>   <%= querydata.getPhone()%>   </td>
-               <td>   <%= querydata.getQuery()%>   </td>
-           </tr>
-           
-           <%
-       }
-    %>
-</table>
 
+    <div>
+        <table id="displaydata">
+            <tr>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>query</th>
+            </tr>
+        </table>
+    </div>
 <%@include file="footer.jsp" %>
 
+<script>
+    document.body.onload = function (){
+       let displaytable = document.getElementById('displaydata');
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) { 
+           let jsonarray =  JSON.parse(xhttp.responseText);
+           for(json of jsonarray) {
+             let row = document.createElement('tr');
+             let entity1 = document.createElement('td');
+             let entity2 = document.createElement('td');
+             let entity3 = document.createElement('td');
+             let entity4 = document.createElement('td');
+             entity1.textContent= json.name;
+             entity2.textContent = json.email;
+             entity3.textContent = json.phone;
+             entity4.textContent = json.query;
+
+             row.appendChild(entity1);
+             row.appendChild(entity2);
+             row.appendChild(entity3);
+             row.appendChild(entity4);
+             displaytable.appendChild(row);
+          }       
+        }
+    }
+    xhttp.open("GET","displaycontent",true);
+    xhttp.send();
+    }
+    
+</script>
 </body>
 </html>
