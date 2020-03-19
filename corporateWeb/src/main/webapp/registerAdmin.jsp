@@ -9,7 +9,7 @@
 <body>
     <%@include file="header.jsp"%>
 
-      <form action="register" method="post" id="registerForm">
+      <form id="registerForm" accept-charset="UTF-8">
           <h1 id="registerheading">register</h1>
           <label for="name" class="label">name</label>
           <input type="text" name="name" id="name" class="inputtext">
@@ -23,7 +23,7 @@
           <label for="repassword" class="label">re-enter password</label>
           <input type="password" name="repassword" id="repassword" class="inputtext">
           <p class="repasswordPtag"></p>
-          <input type="submit" value="register" class="registerbutton" >
+          <input type="submit" onclick="registration()" value="register" class="registerbutton" >
           <a href="adminLogin.jsp" class="loginlink">login</a>
       </form>
 

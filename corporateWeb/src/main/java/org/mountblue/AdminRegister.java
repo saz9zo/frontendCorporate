@@ -7,6 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson; 
+import java.io.*;
 
 
 @WebServlet(name="register", urlPatterns = "/register")
@@ -14,19 +16,20 @@ public class AdminRegister extends HttpServlet{
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
        
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+        String json = br.readLine();
+        Gson g = new Gson();
+        AdminPojo aPojo= g.fromJson(json, AdminPojo.class);   
+
+        // String name = request.getParameter("name");
+        // String email = request.getParameter("email");
+        // String password = request.getParameter("password");
          
-                SaveRegister saveRegister = new SaveRegister();
-                boolean res = saveRegister.saveData(name, email,password);
-
-               if (res == true) {
-                response.sendRedirect("adminLogin.jsp");
-               }
-               else {
-                   response.sendRedirect("registerAdmin.jsp");
-               }
-
+        SaveRegister saveRegister = new SaveRegister();
+        boolean res = saveRegister.saveData(aPojo);
+                    
+        if (res == false) {
+           response.sendError(403);
+        }
     }
 }

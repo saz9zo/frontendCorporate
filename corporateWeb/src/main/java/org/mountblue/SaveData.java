@@ -6,14 +6,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 public class SaveData {
-
-     public void saveit (String name, String email, String phone,String query) {
-             QueryPojo qPojo = new QueryPojo();
-             qPojo.setName(name);
-             qPojo.setEmail(email);
-             qPojo.setPhone(phone);
-             qPojo.setQuery(query); 
-       
+    public void saveit (QueryPojo qPojo) {
+      
              EntityManagerFactory entityManagerFactory = null;
 
           try{
@@ -23,10 +17,12 @@ public class SaveData {
         entityTransaction.begin();
         entityManager.persist(qPojo);
         entityTransaction.commit();
+        entityManager.close();
+       
           }
           catch(Exception e){}
-          finally {
-        entityManagerFactory.close();
+          finally {  
+            entityManagerFactory.close();      
           }
          }    
      }

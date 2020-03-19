@@ -22,12 +22,17 @@ public class Login extends HttpServlet {
        Validate validate = new Validate();
        boolean result = validate.validEntry(username, password);
 
-       if(result == true) {
-           respose.sendRedirect("displayData.jsp");
+       try {
+        if(result == true) {
+            respose.sendRedirect("displayData.jsp");
+        }
+        else {
+            respose.sendRedirect("adminLogin.jsp");
+        }
+ 
+       } catch (Exception e) {
+           
        }
-       else {
-           respose.sendRedirect("adminLogin.jsp");
-       }
-
+      
     }
 }

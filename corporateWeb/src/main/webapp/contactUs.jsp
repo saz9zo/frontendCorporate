@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +10,7 @@
   <%@include file="header.jsp" %>
 
 
-  <form action="serve" id="contactUs" method="POST">
+  <form id="contactUs">
     <h1 class="contact-us-heading">Contact Us</h1>
     <label>Name</label>
     <input type="text" class="name" name="name"><br>
@@ -25,11 +24,10 @@
     <label>Query</label>
     <textarea class="query" name="query"></textarea><br>
     <p class= "querytag"></p>
-    <input type="submit" onclick="return validate()" class="submit" value="submit">
+    <input type="submit" onclick="dataToJson()" class="submit" value="submit">
    </form>
 
   <%@include file="footer.jsp" %>
-
   <script src="js/contactUs.js"></script>
 </body>
 </html>

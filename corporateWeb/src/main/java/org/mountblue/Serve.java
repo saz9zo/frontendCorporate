@@ -7,20 +7,30 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import com.google.gson.Gson; 
+import java.io.*;
 
 
 @WebServlet(name="serve", urlPatterns = "/serve")
 public class Serve extends HttpServlet {
 
+   public void doGet (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+       doPost(request,response);
+   }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            String name = request.getParameter("name");
-            String email = request.getParameter("email");
-            String phone = request.getParameter("number");
-            String query = request.getParameter("query");
+       
+      BufferedReader br = new BufferedReader(new InputStreamReader(request.getInputStream()));
+      String json = br.readLine();
+      Gson g = new Gson();
+      QueryPojo qpojo = g.fromJson(json, QueryPojo.class);    
+
+      SaveData savedata= new SaveData();
+      savedata.saveit(qpojo);
       
-              SaveData savedata= new SaveData();
-              savedata.saveit(name,email,phone,query);
-              
-              response.sendRedirect("contactUs.jsp");
+      try {
+        response.sendRedirect("contactUs.jsp");
+      } catch (Exception e) {
+      
+      }        
     }
 }

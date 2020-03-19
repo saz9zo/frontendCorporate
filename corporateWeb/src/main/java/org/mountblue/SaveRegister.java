@@ -9,17 +9,18 @@ import java.util.*;
 
 
 public class SaveRegister {
-    public boolean saveData (String name, String email, String password) {
+    public boolean saveData (AdminPojo aPojo) {
+        List<AdminPojo> adminList = new ArrayList<>(); 
 
-             if(name=="" || email=="" || password==""){
-                 return false;
-             }
-            List<AdminPojo> adminList = new ArrayList<>(); 
-             String pass = BCrypt.hashpw(password, BCrypt.gensalt(12));
-            AdminPojo aPojo = new AdminPojo();
-            aPojo.setName(name);
-            aPojo.setEmail(email);
-            aPojo.setPassword(pass);
+        String name = aPojo.getName();
+        String email = aPojo.getEmail();
+        String password = aPojo.getPassword();   
+        String pass = BCrypt.hashpw(password, BCrypt.gensalt(12));
+
+       AdminPojo adminPojo = new AdminPojo();
+        adminPojo.setName(name);
+        adminPojo.setEmail(email);
+        adminPojo.setPassword(pass);
 
             
           
@@ -36,7 +37,7 @@ public class SaveRegister {
         }
         
         entityTransaction.begin();
-        entityManager.persist(aPojo);
+        entityManager.persist(adminPojo);
         entityTransaction.commit();
         entityManager.close();
         }
