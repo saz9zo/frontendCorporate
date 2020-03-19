@@ -48,15 +48,10 @@ function dataToJson() {
       phone: phonevalue,
       query: queryvalue
     }
-    console.log(contactMessage);
-  
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         window.alert("message send successfully");
-      }
-      else {
-        window.alert("error occured");
       }
     }
     xhttp.open("POST", "serve", false);

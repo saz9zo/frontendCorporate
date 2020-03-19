@@ -1,3 +1,6 @@
+useful commands---
+
+to run app---
 mvn org.codehaus.cargo:cargo-maven2-plugin:run
 
 
@@ -10,5 +13,3 @@ sudo kill -9 $(sudo lsof -t -i:8080)
 
 stop postgres service
 sudo service postgresql stop
-
-mvn org.codehaus.cargo:cargo-maven2-plugin:run

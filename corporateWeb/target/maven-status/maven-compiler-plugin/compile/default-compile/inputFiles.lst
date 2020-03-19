@@ -2,6 +2,7 @@
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/Login.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/Logout.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/DisplayContactData.java
+/home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/DisplayContent.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/SaveData.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/SaveRegister.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/AdminRegister.java
@@ -9,4 +10,3 @@
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/Serve.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/Validate.java
 /home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/QueryPojo.java
-/home/sakul/frontend/corporateWeb/src/main/java/org/mountblue/displaycontent.java
