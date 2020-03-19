@@ -2,6 +2,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="org.mountblue.QueryPojo" %>
 <%@ page import= "javax.servlet.http.HttpSession"%>
+<%@ page import="com.google.gson.Gson"%>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,25 +38,26 @@
         </tr>
     
     <%
+       
        DisplayContactData contactdata = new DisplayContactData();
-       List<QueryPojo> list = contactdata.fetchData();
-       for(QueryPojo listdata: list){
+       String jsondata = contactdata.fetchData();
+       Gson g = new Gson();
+       QueryPojo[] data = g.fromJson(jsondata, QueryPojo[].class);    
+       for(QueryPojo querydata: data){
                 
         %>
            <tr class="row">
-               <td>   <%= listdata.getName()%>   </td>
-               <td>   <%= listdata.getEmail()%>   </td>
-               <td>   <%= listdata.getPhone()%>   </td>
-               <td>   <%= listdata.getQuery()%>   </td>
-           </tr>
-           
+               <td>   <%= querydata.getName()%>   </td>
+               <td>   <%= querydata.getEmail()%>   </td>
+               <td>   <%= querydata.getPhone()%>   </td>
+               <td>   <%= querydata.getQuery()%>   </td>
+           </tr>   
            <%
        }
     %>
 </table>
 
 <%@include file="footer.jsp" %>
-
 
 </body>
 </html>

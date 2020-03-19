@@ -6,9 +6,10 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 import java.util.*;
+import com.google.gson.Gson; 
 
 public class DisplayContactData {
-    public List<QueryPojo> fetchData () {
+    public String fetchData () {
         List<QueryPojo> queryList = new ArrayList<>();
 
         EntityManagerFactory emfactory = null;
@@ -20,6 +21,8 @@ public class DisplayContactData {
 finally{
   emfactory.close();
 }
-      return queryList;
+Gson g = new Gson();
+String json = g.toJson(queryList); 
+      return json;
     }
 }

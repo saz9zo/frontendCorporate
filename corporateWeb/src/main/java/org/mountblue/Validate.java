@@ -12,10 +12,6 @@ public class Validate {
     
     public boolean validEntry (String username, String password) {
 
-          if(username=="" || password==""){
-              return false;
-          }
-
         List<AdminPojo> adminList = new ArrayList<>();
 
         EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("querycontrol");
